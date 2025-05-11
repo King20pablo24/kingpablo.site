@@ -1,0 +1,176 @@
+/* === RESET أساسي وتحسينات عامة === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #121212; /* أسود ملكي قريب */
+    color: #f0f0f0; /* لون نص فاتح */
+    line-height: 1.6;
+    direction: rtl; /* اتجاه النص من اليمين لليسار */
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden; /* لإدارة العناصر العائمة إذا وجدت */
+    padding: 0 20px;
+}
+
+/* === الهيدر === */
+header {
+    background-color: #1f1f1f; /* درجة أغمق قليلاً من الأسود */
+    padding: 20px 0;
+    border-bottom: 3px solid #FFD700; /* ذهبي */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2em;
+    color: #FFD700; /* ذهبي */
+    font-weight: 700;
+}
+
+.language-switcher a {
+    color: #f0f0f0;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 0.9em;
+}
+
+.language-switcher a.active-lang {
+    color: #FFD700; /* ذهبي للغة النشطة */
+    font-weight: bold;
+}
+
+.language-switcher a:hover {
+    color: #FFD700;
+}
+
+/* === قسم الترحيب (Hero) === */
+.hero {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #1a1a1a; /* خلفية أغمق قليلاً للقسم */
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.hero .site-description {
+    font-size: 1.2em;
+    color: #cccccc;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* === قسم أحدث التطبيقات === */
+.latest-apps {
+    padding: 50px 0;
+}
+
+.latest-apps h3 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #FFD700; /* ذهبي */
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* تصميم شبكي متجاوب */
+    gap: 30px;
+}
+
+.app-card {
+    background-color: #1f1f1f; /* نفس لون الهيدر للبطاقات */
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.1); /* ظل ذهبي خفيف عند المرور */
+}
+
+.app-icon {
+    width: 100px; /* حجم أيقونة التطبيق */
+    height: 100px;
+    object-fit: cover; /* للحفاظ على نسبة الأبعاد */
+    border-radius: 15px; /* زوايا دائرية للأيقونة */
+    margin-bottom: 15px;
+    background-color: #555; /* لون خلفية مؤقت إذا لم توجد صورة */
+}
+
+.app-card h4 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #FFD700; /* ذهبي */
+}
+
+.app-card p {
+    font-size: 0.95em;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+    min-height: 60px; /* ارتفاع ثابت للوصف لتوحيد شكل البطاقات */
+}
+
+.btn-download {
+    display: inline-block;
+    background-color: #FFD700; /* ذهبي */
+    color: #121212; /* أسود */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #e6c200; /* درجة أغمق من الذهبي عند المرور */
+}
+
+/* === الفوتر === */
+footer {
+    background-color: #1f1f1f;
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 3px solid #FFD700; /* ذهبي */
+}
+
+/* === تصميم متجاوب (Responsive) === */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.5em;
+    }
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero h2 {
+        font-size: 2em;
+    }
+    .hero .site-description {
+        font-size: 1em;
+    }
+    .apps-grid {
+        grid-template-columns: 1fr; /* عمود واحد في الشاشات الصغيرة */
+    }
+}

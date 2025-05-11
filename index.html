@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KING PABLO APP - الرئيسية</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Tajawal (خط عربي أنيق) -->
+    <link ضhref="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">KING PABLO APP</h1>
+            <nav class="language-switcher">
+                <a href="#" class="active-lang">عربي</a> |
+                <a href="#">Français</a> |
+                <a href="#">English</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>مرحباً بك في موقع تطبيقات KING PABLO</h2>
+                <p class="site-description">
+                    منصتك الأولى لاستكشاف وتنزيل مجموعة متنوعة من التطبيقات الحصرية والمفيدة،
+                    المطورة بشغف لتلبية احتياجاتك اليومية والروحية والتعليمية.
+                </p>
+            </div>
+        </section>
+
+        <section class="latest-apps">
+            <div class="container">
+                <h3>أحدث التطبيقات</h3>
+                <div class="apps-grid">
+                    <!-- تطبيق افتراضي 1 -->
+                    <div class="app-card">
+                        <img src="placeholder-app1.png" alt="صورة تطبيق القرآن الكريم" class="app-icon">
+                        <h4>تطبيق القرآن الكريم الشامل</h4>
+                        <p>نسخة متكاملة من القرآن الكريم مع تلاوات متعددة، تفسير، وبحث متقدم.</p>
+                        <a href="#" class="btn-download">تحميل التطبيق</a>
+                    </div>
+
+                    <!-- تطبيق افتراضي 2 -->
+                    <div class="app-card">
+                        <img src="placeholder-app2.png" alt="صورة تطبيق منظم المهام" class="app-icon">
+                        <h4>منظم المهام الذكي</h4>
+                        <p>أداة فعالة لتنظيم مهامك اليومية وزيادة إنتاجيتك بسهولة ويسر.</p>
+                        <a href="#" class="btn-download">تحميل التطبيق</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="currentYear"></span> KING PABLO APP. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        // لتحديث السنة في الحقوق تلقائيًا
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
